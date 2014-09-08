@@ -1,0 +1,4 @@
+styles/*.css
+templates/*.js
+templates/*/*.js
+scripts/config.js
