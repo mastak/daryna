@@ -31,6 +31,7 @@
     "noty": "~2.2.6",
     "rivets": "~0.6.10",
     "rivets-backbone-adapter": "~1.6.0",
-    "backbone-relational": "~0.8.8"
+    "backbone-relational": "~0.8.8",
+    "bootstrap-stylus": "~3.2.0"
   }
 }
