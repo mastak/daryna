@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html prefix="og:http://ogp.me/ns#">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Daryna</title>
+		<meta name="description" content="Daryna is site for my wife">
+
+		<link rel="stylesheet" href="/static/styles/main.css">
+		<meta property="og:image" content="/static/images/logo.png">
+	</head>
+
+	<body>
+		<script src="/static/scripts/vendor/requirejs/require.js"></script>
+		<script>
+			require(['/static/scripts/config.js'], function () {
+				requirejs(['app'], function(DarynaApp) {
+					'use strict';
+					DarynaApp.start();
+				});
+			});
+		</script>
+		<header id="header-region"></header>
+		<section id="main-region"></section>
+		<footer id="footer-region"></footer>
+	</body>
+
+</html>

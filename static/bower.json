@@ -1,0 +1,36 @@
+{
+  "name": "Daryna",
+  "version": "0.0.1",
+  "homepage": "git@github.com:mastak/daryna.git",
+  "authors": [
+    "Lubimov Igor <infunt@gmail.com>"
+  ],
+  "description": "Personal site",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "aliases": {
+    "underscore": "lodash"
+  },
+  "dependencies": {
+    "marionette": "~2.1.0",
+    "lodash": "~2.4.1",
+    "requirejs": "~2.1.14",
+    "require-handlebars-plugin": "~0.8.1",
+    "moment": "~2.8.1",
+    "query-string": "~0.4.1",
+    "backbone.subroute": "~0.4.4",
+    "noty": "~2.2.6",
+    "rivets": "~0.6.10",
+    "rivets-backbone-adapter": "~1.6.0",
+    "backbone-relational": "~0.8.8"
+  }
+}

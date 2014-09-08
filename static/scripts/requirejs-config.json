@@ -1,0 +1,60 @@
+{
+	"paths": {
+
+		"noty": "vendor/noty/js/noty/packaged/jquery.noty.packaged",
+		"hbs": "vendor/require-handlebars-plugin/hbs"
+
+	},
+
+	"map": {
+		"*": {
+			"underscore": "lodash"
+		}
+	},
+
+	"packages": [
+		"components/menu",
+		"components/common-layout",
+
+		"shared/analytics",
+		"shared/user",
+		"shared/preloader",
+		"shared/util",
+		"shared/query",
+		"shared/messages",
+		"shared/relational-model",
+		"shared/rivets-binders",
+		"shared/rivets-formatters",
+
+		"apps/user"
+	],
+
+	"config": {
+		"shared/analytics/main": {
+			"accountId": "TODO"
+		}
+	},
+
+	"shim": {
+		"backbone": {
+			"deps": ["jquery", "underscore"],
+			"exports": "Backbone"
+		},
+		"backbone-relational": {
+			"deps": ["backbone"]
+		},
+		"underscore": {
+			"exports": "_"
+		},
+		"backbone-relational": {
+			"deps": ["backbone"]
+		},
+		"noty": {
+			"deps": ["jquery"],
+			"exports": "noty"
+		},
+		"//www.google-analytics.com/analytics.js": {
+			"exports": "ga"
+		}
+	}
+}

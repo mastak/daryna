@@ -1,0 +1,7 @@
+{
+  "directory": "scripts/vendor/",
+  "scripts": {
+    "postinstall": "grunt requirejs-config"
+  }
+}
+
