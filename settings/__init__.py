@@ -25,13 +25,13 @@ tornado_app_settings = {}
 tornado_app_settings['debug'] = DEBUG
 tornado_app_settings['static_hash_cache'] = DEBUG
 tornado_app_settings['static_path'] = STATIC_PATH
-tornado_app_settings['cookie_secret'] = "your-cookie-secret"
+tornado_app_settings['cookie_secret'] = "H?4Mx~RiC{7gLpPVz}0u25niA3*##g3vJXrm7al~tbzem8*CC42pW{bAt"
 tornado_app_settings['xsrf_cookies'] = True
+tornado_app_settings['login_url'] = '/user/login'
 tornado_app_settings['default_handler_class'] = DEFAULT_HANDLER_CLASS
 tornado_app_settings['default_handler_args'] = DEFAULT_HANDLER_ARGS
 tornado_app_settings['static_handler_class'] = NoCacheStaticHandler
 tornado_app_settings['template_loader'] = tornado.template.Loader(TEMPLATE_PATH)
-
 
 if options.config:
     tornado.options.parse_config_file(options.config)

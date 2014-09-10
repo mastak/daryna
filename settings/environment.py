@@ -10,6 +10,7 @@ prev_sys_path = list(sys.path)
 
 site.addsitedir(path('apps'))
 site.addsitedir(path('libs'))
+site.addsitedir(path('contrib/pycket'))
 
 # Move the new items to the front of sys.path. (via virtualenv)
 new_sys_path = []

@@ -4,18 +4,24 @@ define(function (require, exports) {
 		_ = require('underscore'),
 		Backbone = require('backbone'),
 //		request = require('data/request'),
-		commonLayout = require('components/common-layout');
-//		oldSync = Backbone.sync;
+		commonLayout = require('components/common-layout'),
+		oldSync = Backbone.sync;
 
 	$.noConflict();
 	_.noConflict();
 	Backbone.noConflict();
-//
-//	Backbone.sync = function (method, model, options) {
-//		options.beforeSend = function (xhr) {
-//			xhr.setRequestHeader('X-CSRFToken', request.csrf);
-//		};
-//		return oldSync(method, model, options);
-//	};
+
+	Backbone.sync = function (method, model, options) {
+		options.beforeSend = function (xhr) {
+			xhr.setRequestHeader('X-XSRFToken', getCookie('_xsrf'));
+		};
+		return oldSync(method, model, options);
+	};
+
+	function getCookie (name) {
+		var r = document.cookie.match('\\b' + name + '=([^;]*)\\b');
+		return r ? r[1] : undefined;
+	}
+
 	exports.pageLayout = commonLayout();
 });

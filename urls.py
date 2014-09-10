@@ -1,7 +1,6 @@
-from profiles.handlers import Login, Management
+from user.handlers import User
 
 
 url_patterns = [
-    (r"api/", Login),
-    (r"api/management", Management),
+    (r"api/user/current", User),
 ]

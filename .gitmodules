@@ -1,0 +1,3 @@
+[submodule "contrib/pycket"]
+	path = contrib/pycket
+	url = git@github.com:mastak/pycket.git
