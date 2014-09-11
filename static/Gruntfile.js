@@ -114,13 +114,13 @@ module.exports = function (grunt) {
 		stylus: {
 			production: {
 				options: {
-					paths: ['styles']
+					paths: ['styles', 'scripts/vendor/bootstrap-stylus/stylus']
 				},
 				files: [{
 					expand: true,
 					cwd: 'styles',
 					dest: 'styles',
-					src: ['*.styl'],
+					src: ['main.styl'],
 					ext: '.css'
 				}]
 			},

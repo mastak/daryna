@@ -24,12 +24,39 @@ DEFAULT_HANDLER_ARGS = None
 # unless you set them here.  Messages will not propagate through a logger
 # unless propagate: True is set.
 LOGGERS = {
-    'loggers': {
-        'request': {},
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s %(name)-15s %(levelname)-8s %(processName)-10s %(message)s"
+        }
     },
+
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        }
+    },
+
+    "loggers": {
+        "transmit": {
+            "level": "DEBUG",
+            "propagate": False,
+            "handlers": ["console"]
+        },
+    },
+
+    "root": {
+        "level": "INFO",
+        "handlers": ["console"]
+    }
 }
 
-SYSLOG_TAG = "request"
+
+SYSLOG_TAG = "transmit"
 SYSLOG_FACILITY = logging.handlers.SysLogHandler.LOG_LOCAL2
 
 if DEBUG:

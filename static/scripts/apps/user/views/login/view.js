@@ -5,6 +5,7 @@ define(function (require) {
 
 	return Marionette.ItemView.extend({
 		template: template,
+		className: 'authorization',
 
 		events: {
 			'click .authorization__buttons__login': 'authorization'
