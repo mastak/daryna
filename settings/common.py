@@ -18,11 +18,12 @@ XSRF_COOKIES = True
 DEFAULT_HANDLER_CLASS = None
 DEFAULT_HANDLER_ARGS = None
 
-# See PEP 391 and logconfig for formatting help.  Each section of LOGGERS
-# will get merged into the corresponding section of log_settings.py.
-# Handlers and log levels are set up automatically based on LOG_LEVEL and DEBUG
-# unless you set them here.  Messages will not propagate through a logger
-# unless propagate: True is set.
+MONGODB = {
+    'host': '127.0.0.1',
+    'port': '27017',
+    'name': 'daryna',
+}
+
 LOGGERS = {
     "version": 1,
     "disable_existing_loggers": False,

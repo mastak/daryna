@@ -11,13 +11,15 @@ class UserHandler(BaseHandler):
 
     @tornado.gen.coroutine
     def get(self, user_id=None):
+        print(user_id)
         if user_id == 'current':
             user = self.user
         else:
-            user = models.User(pk=user_id)
+            user = yield models.User.load(pk=user_id)
         self.write({
             'id': user.id,
             'name': user.name,
-            'avatar': user.avatar
+            'avatar': user.avatar,
+            'is_authenticated': user.is_authenticated()
         })
         self.finish()
