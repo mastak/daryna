@@ -13,3 +13,7 @@ class User():
 
     def is_authenticated(self):
         return True
+
+    id = 1
+    name = "name"
+    avatar = 'ava'

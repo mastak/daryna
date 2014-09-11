@@ -5,7 +5,7 @@ from pycket.session import SessionMixin
 
 from user.auth import get_user
 
-logger = logging.getLogger('request.' + __name__)
+logger = logging.getLogger('transmit.' + __name__)
 
 
 class BaseHandler(tornado.web.RequestHandler, SessionMixin):
