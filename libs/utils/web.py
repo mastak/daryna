@@ -16,3 +16,4 @@ class BaseHandler(tornado.web.RequestHandler, SessionMixin):
     def __init__(self, application, request, **kwargs):
         super().__init__(application, request, **kwargs)
         self.user = get_user(self)
+        self.db = self.settings['db']
