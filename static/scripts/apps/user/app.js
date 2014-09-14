@@ -11,7 +11,7 @@ define(function (require) {
 		this.router = new UserRouter({
 			controller: new UserController()
 		});
-	});
+	}.bind(app));
 
 	DarynaApp.on('user:login', function () {
 		DarynaApp.navigate('user/login/');

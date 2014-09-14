@@ -17,6 +17,7 @@ DEBUG = False
 
 from settings.common import *
 from settings.cdn import *
+from settings.social import *
 try:
     from settings.local import *
 except ImportError:
@@ -41,7 +42,7 @@ tornado_app_settings['static_hash_cache'] = DEBUG
 tornado_app_settings['static_path'] = STATIC_PATH
 tornado_app_settings['cookie_secret'] = "H?4Mx~RiC{7gLpPVz}0u25niA3*##g3vJXrm7al~tbzem8*CC42pW{bAt"
 tornado_app_settings['xsrf_cookies'] = True
-tornado_app_settings['login_url'] = '/user/login'
+tornado_app_settings['login_url'] = LOGIN_URL
 tornado_app_settings['default_handler_class'] = DEFAULT_HANDLER_CLASS
 tornado_app_settings['default_handler_args'] = DEFAULT_HANDLER_ARGS
 tornado_app_settings['static_handler_class'] = DEBUG and NoCacheStaticHandler or None

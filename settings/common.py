@@ -13,6 +13,8 @@ STATIC_PATH = path("static")
 MEDIA_PATH = path('media')
 TEMPLATE_PATH = path('templates')
 
+LOGIN_URL = 'http://ilubimov.name/user/login/'
+
 COOKIE_SECRET = "Sn|MAYX3Yxtjn?tg5K1SWII~YX~zJGI%ukvNbOIk3}sPuinuN51%j9LD5oTp"
 XSRF_COOKIES = True
 DEFAULT_HANDLER_CLASS = None
