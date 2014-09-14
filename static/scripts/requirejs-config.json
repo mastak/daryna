@@ -15,6 +15,7 @@
 	"packages": [
 		"components/menu",
 		"components/common-layout",
+		"components/vk",
 
 		"shared/analytics",
 		"shared/user",
@@ -30,6 +31,17 @@
 	],
 
 	"config": {
+		"components/vk/main": {
+			"urlAuth": "https://oauth.vk.com/authorize",
+			"paramsAuth": {
+				"client_id": "4546907",
+				"scope": "friends,offline,wall,email",
+				"redirect_uri": "http://ilubimov.name/user/login/",
+				"display": "popup",
+				"v": "5.24",
+				"response_type": "code"
+			}
+		},
 		"shared/analytics/main": {
 			"accountId": "TODO"
 		}
