@@ -5,6 +5,7 @@ Daryna -- a simple web app for my wife
 
 ...
 
+
 ## Authors
 
 * Lubimov Igor
